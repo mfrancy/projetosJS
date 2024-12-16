@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
     <link rel="stylesheet" href="calculadora.css">
+    <script src="https://cdn.jsdelivr.net/npm/inputmask/dist/inputmask.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="calculadora">
+            <form action="">
             <h1 class="titulo">Calculadora IMC</h1>
             <label for="nome">Nome</label>
-            <input type="text" name="" id="nome">
+            <input required type="text" name="" id="nome">
             <label for="nome">Altura</label>
-            <input type="text" name="" id="altura">
+            <input required min="0" type="text" name="" id="altura">
             <label for="nome">Peso</label>
-            <input type="text" name="" id="peso">
+            <input required type="text" name="" id="peso">
             <div class="divBotao">
-                <button class="botao">Calcular</button>
+                <button type="button" id="botao" class="botao">Calcular</button>
             </div>
-            <div class="resultado">Seu resultado é de </div>
+        </form>
+            <div id="resultado" class="resultado"></div>
         </div>
     </div>
+
+    <script src="calculadora.js"></script>
 </body>
 </html>
